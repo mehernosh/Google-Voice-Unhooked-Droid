@@ -7,7 +7,7 @@ Google voice does not have an official API! This app has been created by sniffin
 In fact, the grand central session is started by making a simple GET request for https://google.com/voice and scraping the response.
 So, if you get your google account deactivated for messing arround, thats your problem.
 
-Prerequisits for using the app: 
+Prerequisites for using the app: 
 ~A google account with voice enabled
 ~Internet access
 
