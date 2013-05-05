@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">GoogleVoiceUnhooked</string>
+    <string name="action_settings">Settings</string>
+    <string name="gmail_domain">\@gmail.com</string>
+    <string name="username_label">username</string>
+    <string name="password_label">password</string>
+    <string name="rememberme_label">Remember me</string>
+    <string name="login_label">Login</string>
+    <string name="idle_message">-- -- waiting -- --</string>
+    <string name="login_handler">doLogin</string>
+    <string name="title_activity_call_back_dialer">CallBackDialer</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_dialpad">Dialpad</string>
+	<string name="callback_label">Initiate Callback</string>
+	<string name="cancel_callback_label">Abort</string>
+	<string name="callback_handler">initiateCallBack</string>
+	<string name="cancel_callback_handler">cancelCallBack</string>
+	
+</resources>
