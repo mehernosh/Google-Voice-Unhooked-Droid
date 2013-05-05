@@ -1,6 +1,6 @@
 Google-Voice-Unhooked-Droid
 ===========================
-Google voice droid attempts to allow users to initiate call-backs from their android phones. 
+Google voice unhooked for android attempts to allow users to initiate call-backs from their android phones. 
 
 !!!WARNING!!!
 Google voice does not have an official API! This app has been created by sniffing packets while using google voice.
