@@ -22,18 +22,22 @@ public final class R {
     }
     public static final class drawable {
         public static final int ic_launcher=0x7f020000;
+        public static final int search_contacts=0x7f020001;
     }
     public static final class id {
-        public static final int action_settings=0x7f080009;
-        public static final int button2=0x7f080003;
-        public static final int call_button=0x7f080002;
-        public static final int callback_phone_input=0x7f080000;
-        public static final int dialer_input=0x7f080001;
-        public static final int login_button=0x7f080007;
-        public static final int passwd_input=0x7f080006;
-        public static final int rememberme_input=0x7f080008;
-        public static final int status_box=0x7f080004;
-        public static final int username_input=0x7f080005;
+        public static final int action_settings=0x7f08000c;
+        public static final int button2=0x7f080005;
+        public static final int call_button=0x7f080001;
+        public static final int callback_phone_input=0x7f080002;
+        public static final int dialer_input=0x7f080004;
+        public static final int login_button=0x7f08000a;
+        public static final int passwd_input=0x7f080009;
+        public static final int phone_to_dial_label=0x7f080007;
+        public static final int phone_to_use_label=0x7f080006;
+        public static final int rememberme_input=0x7f08000b;
+        public static final int search_contacts_button=0x7f080003;
+        public static final int status_box=0x7f080000;
+        public static final int username_input=0x7f080008;
     }
     public static final class layout {
         public static final int activity_dialpad=0x7f030000;
@@ -47,9 +51,9 @@ public final class R {
     public static final class string {
         public static final int action_settings=0x7f050001;
         public static final int app_name=0x7f050000;
-        public static final int callback_handler=0x7f05000e;
+        public static final int callback_handler=0x7f050011;
         public static final int callback_label=0x7f05000c;
-        public static final int cancel_callback_handler=0x7f05000f;
+        public static final int cancel_callback_handler=0x7f050012;
         public static final int cancel_callback_label=0x7f05000d;
         public static final int gmail_domain=0x7f050002;
         public static final int hello_world=0x7f05000a;
@@ -57,7 +61,11 @@ public final class R {
         public static final int login_handler=0x7f050008;
         public static final int login_label=0x7f050006;
         public static final int password_label=0x7f050004;
+        public static final int phone_to_dial_label=0x7f050010;
+        public static final int phone_to_use_label=0x7f05000f;
         public static final int rememberme_label=0x7f050005;
+        public static final int search_contact_handler=0x7f050013;
+        public static final int search_contacts_label=0x7f05000e;
         public static final int title_activity_call_back_dialer=0x7f050009;
         public static final int title_activity_dialpad=0x7f05000b;
         public static final int username_label=0x7f050003;

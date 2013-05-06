@@ -15,7 +15,11 @@
     <string name="title_activity_dialpad">Dialpad</string>
 	<string name="callback_label">Initiate Callback</string>
 	<string name="cancel_callback_label">Abort</string>
+	<string name="search_contacts_label">Contacts</string>
+	<string name="phone_to_use_label">Use this phone:(select below)</string>
+	<string name="phone_to_dial_label">To call this number.</string>
 	<string name="callback_handler">initiateCallBack</string>
 	<string name="cancel_callback_handler">cancelCallBack</string>
+	<string name="search_contact_handler">pickContact</string>
 	
 </resources>
