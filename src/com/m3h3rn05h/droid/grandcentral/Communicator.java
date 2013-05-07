@@ -7,21 +7,22 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.io.UnsupportedEncodingException;
 import java.lang.ref.WeakReference;
-import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.net.URLConnection;
 import java.net.URLEncoder;
 import java.util.ArrayList;
+
+import javax.net.ssl.HttpsURLConnection;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-import com.m3h3rn05h.droid.googlevoiceunhooked.Dialpad;
 
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.widget.TextView;
+
+import com.m3h3rn05h.droid.googlevoiceunhooked.Dialpad;
 
 public class Communicator extends AsyncTask<String, String, Integer> {
 
@@ -165,8 +166,8 @@ public class Communicator extends AsyncTask<String, String, Integer> {
 			publishProgress("Logging in:");
 			publishProgress(Constants.loginURLString);
 			URL url = new URL(Constants.loginURLString);
-			HttpURLConnection conn;
-			conn = (HttpURLConnection) url.openConnection();
+			HttpsURLConnection conn;
+			conn = (HttpsURLConnection) url.openConnection();
 			conn.setRequestProperty("User-agent", Constants.USER_AGENT);
 			conn.setDoOutput(true);
 			OutputStreamWriter wr = new OutputStreamWriter(
@@ -266,7 +267,7 @@ public class Communicator extends AsyncTask<String, String, Integer> {
 		URL url = new URL(urlString);
 		// + "?auth=" + URLEncoder.encode(authToken, enc));
 
-		HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+		HttpsURLConnection conn = (HttpsURLConnection) url.openConnection();
 		conn.setRequestProperty("Authorization", "GoogleLogin auth="
 				+ authToken);
 		conn.setRequestProperty("User-agent", Constants.USER_AGENT);
@@ -283,9 +284,9 @@ public class Communicator extends AsyncTask<String, String, Integer> {
 		InputStream is;
 		if (responseCode == 200) {
 			is = conn.getInputStream();
-		} else if (responseCode == HttpURLConnection.HTTP_MOVED_PERM
-				|| responseCode == HttpURLConnection.HTTP_MOVED_TEMP
-				|| responseCode == HttpURLConnection.HTTP_SEE_OTHER
+		} else if (responseCode == HttpsURLConnection.HTTP_MOVED_PERM
+				|| responseCode == HttpsURLConnection.HTTP_MOVED_TEMP
+				|| responseCode == HttpsURLConnection.HTTP_SEE_OTHER
 				|| responseCode == 307) {
 			redirectCounter++;
 			if (redirectCounter > Constants.MAX_REDIRECTS) {
@@ -362,7 +363,7 @@ public class Communicator extends AsyncTask<String, String, Integer> {
 			publishProgress(Constants.callConnectURLString);
 			URL callURL = new URL(Constants.callConnectURLString);
 
-			URLConnection callconn = callURL.openConnection();
+			HttpsURLConnection callconn = (HttpsURLConnection)callURL.openConnection();
 			callconn.setRequestProperty("Authorization", "GoogleLogin auth="
 					+ authToken);
 			callconn.setRequestProperty("User-agent", Constants.USER_AGENT);
@@ -457,7 +458,7 @@ public class Communicator extends AsyncTask<String, String, Integer> {
 		// page]
 		URL callURL = new URL(Constants.cancelCallConnectURLString);
 
-		URLConnection callconn = callURL.openConnection();
+		HttpsURLConnection callconn =(HttpsURLConnection) callURL.openConnection();
 		callconn.setRequestProperty( "Authorization",
                 "GoogleLogin auth="+authToken );
 		callconn
