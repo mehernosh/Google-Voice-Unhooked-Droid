@@ -5,7 +5,9 @@ Google voice unhooked for android attempts to allow users to initiate call-backs
 !!!WARNING!!!
 Google voice does not have an official API! This app has been created by sniffing packets while using google voice.
 In fact, the grand central session is started by making a simple GET request for https://google.com/voice and scraping the response.
-So, if you get your google account deactivated for messing arround, thats your problem.
+So, if you get your google account deactivated for messing around, thats your problem.
+
+Searchs from contacts. Does not integrate with native phone dialer yet.
 
 Prerequisites for using the app: 
 ~A google account with voice enabled
