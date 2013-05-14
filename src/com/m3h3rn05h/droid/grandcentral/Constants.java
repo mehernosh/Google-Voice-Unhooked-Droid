@@ -1,7 +1,9 @@
 package com.m3h3rn05h.droid.grandcentral;
 
 public class Constants {
-	final static String account_type = "GOOGLE";
+	final static String account_type_google = "GOOGLE";
+	final static String account_type_hosted = "HOSTED";
+	final static String account_type_hosted_or_google = "HOSTED_OR_GOOGLE";
 	final static String service = "grandcentral";
 	final static String source = "com.m3h3rn05h";
 	final static String enc = "UTF-8";

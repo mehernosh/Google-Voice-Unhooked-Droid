@@ -6,7 +6,6 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.io.UnsupportedEncodingException;
-import java.lang.ref.WeakReference;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLEncoder;
@@ -26,7 +25,7 @@ import com.m3h3rn05h.droid.googlevoiceunhooked.Dialpad;
 
 public class Communicator extends AsyncTask<String, String, Integer> {
 
-	private WeakReference<TextView> textViewRef;
+	private TextView textViewRef;
 	private String authToken;
 	private String rnrSe;
 	private int redirectCounter;
@@ -39,16 +38,12 @@ public class Communicator extends AsyncTask<String, String, Integer> {
 		rnrSe = VoiceSession.getInstance().getRnrSe();
 	}
 
-	public WeakReference<TextView> getTextViewRef() {
+	public TextView getTextViewRef() {
 		return textViewRef;
 	}
 
-	public void setTextViewRef(WeakReference<TextView> textViewRef) {
+	public void setTextViewRef(TextView textViewRef) {
 		this.textViewRef = textViewRef;
-	}
-
-	public void setTextViewRef(TextView textView) {
-		this.textViewRef = new WeakReference<TextView>(textView);
 	}
 
 	public String getAuthToken() {
@@ -112,7 +107,6 @@ public class Communicator extends AsyncTask<String, String, Integer> {
 					s.addPhone(new Phone(phone.getInt("id"), phone
 							.getString("phoneNumber"), phone.getInt("type")));
 				}
-
 			}
 			json = null;
 		} catch (IOException e) {
@@ -154,7 +148,7 @@ public class Communicator extends AsyncTask<String, String, Integer> {
 		authToken = null;
 		try {
 			data = URLEncoder.encode("accountType", Constants.enc) + "="
-					+ URLEncoder.encode(Constants.account_type, Constants.enc);
+					+ URLEncoder.encode(Constants.account_type_google, Constants.enc);
 			data += "&" + URLEncoder.encode("Email", Constants.enc) + "="
 					+ URLEncoder.encode(user, Constants.enc);
 			data += "&" + URLEncoder.encode("Passwd", Constants.enc) + "="
@@ -236,11 +230,10 @@ public class Communicator extends AsyncTask<String, String, Integer> {
 			case 0:
 			case 1:
 				writeStatusLine("Authentication Successful; we're in!");
-				TextView textView = textViewRef.get();
-				if (textView != null) {
-					Intent intent = new Intent(textView.getContext(),
+				if (textViewRef != null) {
+					Intent intent = new Intent(textViewRef.getContext(),
 							Dialpad.class);// textView.getContext()
-					textView.getContext().startActivity(intent);
+					textViewRef.getContext().startActivity(intent);
 				}
 				break;
 			case 3:
@@ -256,9 +249,8 @@ public class Communicator extends AsyncTask<String, String, Integer> {
 
 	private void writeStatusLine(String line) {
 		if (textViewRef != null) {
-			TextView textView = textViewRef.get();
-			if (textView != null) {
-				textView.setText('\n' + line);
+			if (textViewRef != null) {
+				textViewRef.setText('\n' + line);
 			}
 		}
 	}

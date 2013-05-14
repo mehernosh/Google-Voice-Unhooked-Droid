@@ -6,17 +6,15 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".MainActivity" 
-    android:orientation="vertical">
-	
-<!-- 
+    tools:context=".Login" >
+
     <EditText
         android:id="@+id/username_input"
         android:layout_width="160dp"
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="@string/username_label" >
-		
+
         <requestFocus />
     </EditText>
 
@@ -27,8 +25,8 @@
         android:layout_alignLeft="@+id/username_input"
         android:layout_below="@+id/username_input"
         android:ems="10"
-        android:inputType="textPassword" 
-        android:hint="@string/password_label"/>
+        android:hint="@string/password_label"
+        android:inputType="textPassword" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -36,8 +34,8 @@
         android:layout_alignBaseline="@+id/username_input"
         android:layout_alignBottom="@+id/username_input"
         android:layout_toRightOf="@+id/username_input"
-        android:text="@string/gmail_domain" 
-        android:gravity="bottom" />
+        android:gravity="bottom"
+        android:text="@string/gmail_domain" />
 
     <Button
         android:id="@+id/login_button"
@@ -45,8 +43,8 @@
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/passwd_input"
         android:layout_below="@+id/passwd_input"
-        android:text="@string/login_label"
-        android:onClick="@string/login_handler" />
+        android:onClick="@string/login_handler"
+        android:text="@string/login_label" />
 
     <CheckBox
         android:id="@+id/rememberme_input"
@@ -65,16 +63,6 @@
         android:layout_below="@+id/login_button"
         android:maxLines="3"
         android:scrollbars="vertical"
-        android:text="@string/idle_message" />-->
-
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="172dp"
-        android:text="@string/hello_world"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
+        android:text="@string/idle_message" />
 
 </RelativeLayout>

@@ -1,7 +1,5 @@
 package com.m3h3rn05h.droid.googlevoiceunhooked;
 
-import java.util.ArrayList;
-
 import android.annotation.TargetApi;
 import android.app.Activity;
 import android.content.Intent;
